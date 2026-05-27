@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-white text-ink font-sans text-base;
+    margin: 0;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display font-semibold;
+  }
+}
+
+@layer components {
+  .hero-curve {
+    clip-path: ellipse(85% 95% at 75% 50%);
+  }
+}
