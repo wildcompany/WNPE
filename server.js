@@ -9,6 +9,9 @@ const authRoutes = require('./routes/authRoutes');
 const productRoutes = require('./routes/productRoutes');
 const orderRoutes = require('./routes/orderRoutes');
 const cartRoutes = require('./routes/cartRoutes');
+const checkoutRoutes = require('./routes/checkoutRoutes');
+const customRequestRoutes = require('./routes/customRequestRoutes');
+const bookingRoutes = require('./routes/bookingRoutes');
 
 // Initialization
 dotenv.config();
@@ -31,6 +34,9 @@ app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes); 
 app.use('/api/orders', orderRoutes);
 app.use('/api/cart', cartRoutes);
+app.use('/api/checkout', checkoutRoutes);
+app.use('/api/customizations', customRequestRoutes);
+app.use('/api/bookings', bookingRoutes);
 
 // Health Check Route
 app.get('/', (req, res) => {
